@@ -1,10 +1,10 @@
 # Set username and password here
 USERNAME='admin'
 PASSWORD='admin'
-NAMESPACE=istio-system
+NAMESPACE='istio-system'
 
-KIALI_USERNAME=$(echo $USERNAME | base64)
-KIALI_PASSPHRASE=$(echo $PASSWORD | base64)
+KIALI_USERNAME=$(echo -n $USERNAME | base64)
+KIALI_PASSPHRASE=$(echo -n $PASSWORD | base64)
 
 
 #Create namespace
